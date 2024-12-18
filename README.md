@@ -3,19 +3,11 @@
 
 ## **Visão Geral do Projeto**
 
-Disponível em https://github.com/felipeslisboa99/Postech---Tech-Challenge---Fase-3
-
 Este projeto foi desenvolvido no contexto do Tech Challenge, com o objetivo de realizar uma análise abrangente sobre os principais indicadores relacionados à pandemia de COVID-19 no Brasil. Utilizando uma base de dados composta por 1.157.984 participantes, fornecemos insights que visam:
 
 - Identificar o perfil dos potenciais pacientes.
 - Analisar os impactos econômicos e sociodemográficos.
 - Propor diretrizes práticas para otimização da infraestrutura e recursos hospitalares.
-
-## **Objetivos Específicos**
-
-1. Oferecer um panorama detalhado dos sintomas predominantes e perfis de risco.
-2. Avaliar as desigualdades regionais e o impacto econômico na saúde.
-3. Fornecer diretrizes para preparação hospitalar em cenários de alta demanda.
 
 ## **Arquitetura do Projeto**
 
@@ -23,14 +15,13 @@ O projeto está organizado nos seguintes arquivos e documentos:
 
 - **Grupo.txt**: Lista dos integrantes do grupo com seus respectivos e-mails para contato.
 - **Tech Challenge Covid-19.docx**: Documento principal que detalha a análise realizada, incluindo tabelas e insights relevantes.
-- **Tech Challenge - Fase 3_apresentação.pdf**: Documento com os pontos principais do projeto para apresentação, em formato .pdf.
-- **Tech Challenge - Fase 3_apresentação.pptx**: Documento com os pontos principais do projeto para apresentação, em formato .pptx.
 - **Script\_analise\_dados.sql**: Script utilizado para a análise dos dados.
 - **caracteristicas\_dos\_sintomas.csv**: Base de dados contendo informações sobre os sintomas relatados pela população.
 - **caracteristicas\_economicas.csv**: Dados relacionados à situação econômica dos participantes.
 - **comportamento\_COVID19.csv**: Informações sobre o comportamento da população durante a pandemia.
 - **Explicações das tabelas.docx**: Documento explicativo sobre as tabelas utilizadas no projeto.
 - **tabela\_agrupada\_COVID19.xlsx**: Documento Excel com a consolidação de dados relevantes para a pesquisa.
+- **Tech Challenge - Fase 3\_apresentação.pdf**: Apresentação final detalhando os principais resultados e diretrizes do projeto.
 
 ## **Relações entre os Arquivos CSV**
 
@@ -50,6 +41,16 @@ Os arquivos CSV estão organizados para capturar diferentes aspectos da pesquisa
 
    - Registra o comportamento da população em relação à pandemia, como busca por atendimento médico, tipo de atendimento e exames realizados.
    - Chave principal: `id_participante`.
+
+### **Relacionamento entre os Arquivos**:
+
+- **Chave Primária Comum**: Todos os arquivos compartilham a chave `id_participante`, que permite relacionar os dados de um mesmo participante entre os diferentes aspectos analisados.
+- **Integração dos Dados**:
+  - Dados de sintomas podem ser cruzados com condições econômicas para identificar perfis de vulnerabilidade.
+  - Informações de comportamento permitem entender a relação entre severidade dos sintomas e busca por atendimento.
+- **Possibilidades Analíticas**:
+  - Identificar correlações entre condição econômica e taxa de busca por atendimento.
+  - Avaliar a frequência de sintomas graves em diferentes regiões ou classes sociais.
 
 ## **Detalhes do Documento Excel**
 
@@ -77,6 +78,47 @@ O arquivo **tabela\_agrupada\_COVID19.xlsx** consolida as principais informaçõ
    - Criação de gráficos e dashboards para apresentações visuais.
    - Exportação para outras ferramentas de análise, como Python ou Power BI.
    - Comparações regionais e segmentações por demografia.
+
+## **Detalhes da Apresentação PDF**
+
+O documento **Tech Challenge - Fase 3\_apresentação.pdf** sintetiza os principais resultados e direcionamentos do projeto. Os destaques incluem:
+
+1. **Objetivos Principais**:
+
+   - Oferecer um panorama detalhado dos indicadores relacionados à COVID-19.
+   - Identificar o perfil dos potenciais pacientes.
+   - Propor diretrizes práticas para enfrentar novas ondas de contaminação.
+
+2. **Panorama Geral da Pesquisa**:
+
+   - Participantes: **1.157.984**.
+   - Distribuição de gênero: **52% Mulheres**, **48% Homens**.
+   - Faixa etária predominante: **26-59 anos (47,3%)**.
+
+3. **Distribuição Regional**:
+
+   - Nordeste: **30,6%**.
+   - Sudeste: **29,4%**.
+   - Sul: **17,2%**.
+   - Norte: **12,2%**.
+   - Centro-Oeste: **10,6%**.
+
+4. **Média Salarial por Faixa Etária**:
+
+   - Adultos (26-59 anos): **R\$ 1.268,86**.
+   - Jovens (18-25 anos): **R\$ 478,06**.
+   - Idosos (60+): **R\$ 398,81**.
+
+5. **Principais Sintomas Relatados**:
+
+   - Leves: **Nariz entupido (17%)**, **Tosse (15%)**, **Dor de garganta (12%)**.
+   - Graves: **Dificuldade para respirar (5%)**, **Dor no peito (4%)**.
+
+6. **Recomendações Estratégicas**:
+
+   - **Infraestrutura**: Reforçar a capacidade de atendimento para casos leves e graves.
+   - **Capacitação da Equipe**: Treinamento para identificação rápida de sintomas críticos.
+   - **Monitoramento**: Implementar triagem avançada e estratégias de comunicação.
 
 ## **Detalhes do Script SQL**
 
@@ -116,7 +158,6 @@ A análise seguiu as etapas abaixo:
 1. **Coleta e Limpeza de Dados**:
 
    - Garantimos a diversidade amostral considerando idade, gênero e região geográfica.
-   - Lidamos com inconsistências nos dados para assegurar a qualidade da análise.
 
 2. **Análise Descritiva**:
 
@@ -139,25 +180,28 @@ A análise seguiu as etapas abaixo:
 - Apenas 1,31% dos participantes buscaram atendimento médico, sugerindo desafios no acesso à saúde.
 - Regiões Nordeste e Sudeste concentraram 60% dos participantes, exigindo foco prioritário em ações locais.
 
+## **Recomendações para o Hospital**
+
+1. Expandir a estrutura para atendimento de casos leves e moderados.
+2. Investir em capacitação de equipes médicas para identificar rapidamente sintomas graves.
+3. Implementar sistemas de triagem e monitoramento preventivo.
+4. Realizar campanhas educativas para aumentar a adesão aos serviços hospitalares privados.
+
 ## **Integrantes do Grupo**
 
 Os responsáveis pelo projeto são:
 
-- **Renato Batista dos Santos** (RM358000)
-- **Jéssyca Dias Matos Lima** (RM357221)
-- **Everton Ferreira Alves** (RM357837)
-- **Felipe Saraiva Lisboa** (RM357647)
-- **Roberto Silva de Sá Barreto** (RM357023)
+- **Renato Batista dos Santos** ([renatobatista10@icloud.com](mailto\:renatobatista10@icloud.com))
+- **Jéssyca Dias Matos Lima** ([jessycadiasmatoslima@gmail.com](mailto\:jessycadiasmatoslima@gmail.com))
+- **Everton Ferreira Alves** ([everton.f.a@outlook.com](mailto\:everton.f.a@outlook.com))
+- **Felipe Saraiva Lisboa** ([felipe.marcela@hotmail.com](mailto\:felipe.marcela@hotmail.com))
+- **Roberto Silva de Sá Barreto** ([roberval77@gmail.com](mailto\:roberval77@gmail.com))
 
 ## **Como Utilizar**
 
-1. **Acesse o Documentos**: Verifique o arquivo listado na seção "Tech Challenge Covid-19.docx" para a análise detalhada.
+1. **Acesse os Documentos**: Verifique os arquivos listados na seção "Arquitetura do Projeto" para a análise detalhada.
 2. **Entre em Contato**: Utilize os e-mails listados no arquivo "Grupo.txt" para qualquer dúvida ou esclarecimento.
 3. **Adapte as Recomendações**: As diretrizes são personalizáveis para aplicação em diferentes hospitais e cenários regionais.
-
-## **Licença e Direitos**
-
-Este projeto é de uso educacional e pode ser adaptado para iniciativas semelhantes.
 
 ## **Contato**
 
